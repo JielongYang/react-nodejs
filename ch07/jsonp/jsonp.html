@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title></title>
+</head>
+
+<body>
+    <button id="btn_id">JSONP跨域获取数据</button>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function cbFunction(data) {
+            alert('data: ' + JSON.stringify(data));
+        }
+
+        $("#btn_id").click(function () {
+            $("head").append("<script src='http://localhost:8080/?callback=cbFunction'><\/script>");
+        });
+    </script>
+</body>
+
+</html>

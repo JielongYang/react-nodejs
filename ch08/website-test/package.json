@@ -1,0 +1,11 @@
+{
+    "scripts": {
+        "e2e:open": "cypress open",
+        "e2e:run": "cypress run"
+    },
+    "devDependencies": {
+        "cypress": "^4.11.0",
+        "mochawesome": "^6.1.1",
+        "mochawesome-merge": "^4.1.0"
+    }
+}

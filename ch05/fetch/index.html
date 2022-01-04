@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        var data = { username: 'test' };
+
+        fetch('https://www.api.com/', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: new Headers({
+                'Content-Type': 'application/json'
+            })
+        }).then((res) => {
+            return res.json()
+        }).then((json) => {
+            console.log(json)
+        });
+
+        var content = "Hello World";
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "text/plain");
+        myHeaders.append("Content-Length", content.length.toString());
+        myHeaders.append("X-Custom-Header", "ProcessThisImmediately");
+        fetch('https://www.api.com/', {headers: myHeaders})
+
+        fetch('https://www.api.com/', {
+            credentials: 'include'
+        })
+    </script>
+</body>
+
+</html>

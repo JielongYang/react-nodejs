@@ -1,0 +1,1 @@
+var fs=require("fs");function main(e){fs.createReadStream(e[0]).pipe(fs.createWriteStream(e[1]))}(args=process.argv.slice(2))&&2===args.length?main(args):console.log("args is invalid!");var args;fs=require("fs");function main(e){fs.createReadStream(e[0]).pipe(fs.createWriteStream(e[1]))}(args=process.argv.slice(2))&&2===args.length?main(args):console.log("args is invalid!");
